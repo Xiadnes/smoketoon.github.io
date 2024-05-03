@@ -6,15 +6,30 @@
 	<title>Document</title>
 </head>
 <style>
-  .container {
-  	width: 100%;
-  	height: 100%;
-    background-image: url('1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  html,
+body {
+    height: 100%;
+}
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.table__cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
 </style>
 <body>
-	<div class='container'></div>
+	<div class="table">
+    <div class="table__cell">
+        <img src="1.jpg" alt="">
+    </div>
+</div>
 </body>
 </html>
