@@ -6,22 +6,66 @@
 	<title>Document</title>
 </head>
 <style>
-  html,
-body {
-    height: 100%;
-}
-
 .container {
-    width: 100vh;
+    position: relative;
+    width: 100%;
     height: 100vh;
 }
-.foto{
-	width: 100%;
-	height: 100%;
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    position: absolute;
+    width: 83.2%;
+    cursor: pointer;
+}
+
+.button1 {
+    top: 21.444%;
+    left: 8.4%;
+    height: 21.666%; /* Высота кнопки 1 */
+}
+
+.button2 {
+    top: 47.777%;
+    left: 8.4%;
+    height: 11.111%; /* Высота кнопки 2 */
+}
+
+.button3 {
+    top: 63%;
+    left: 8.4%;
+    height: 11.111%; /* Высота кнопки 3 */
+}
+
+.button4 {
+    top: 79.111%;
+    left: 8.4%;
+    height: 11.111%; /* Высота кнопки 4 */
 }
 </style>
 <body>
-	<div class='container'><img src='фон.jpg' class='foto'></div>
+	<div class="container">
+        <img src="фон.jpg" alt="Фоновое изображение" class="background">
+        <a href="#">
+            <img src="1knopka.png" alt="Кнопка 1" class="button button1">
+        </a>
+        <a href="#">
+            <img src="2knopka.png" alt="Кнопка 2" class="button button2">
+        </a>
+        <a href="#">
+            <img src="3knopka.png" alt="Кнопка 3" class="button button3">
+        </a>
+        <a href="#">
+            <img src="4knopka.png" alt="Кнопка 4" class="button button4">
+        </a>
+    </div>
 </div>
 </body>
 </html>
