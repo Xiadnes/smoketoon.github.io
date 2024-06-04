@@ -3,43 +3,141 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style1.css">
 	<title>Document</title>
 </head>
+<style>
+
+/* Стили для контейнера */
+.container {
+    position: relative; /* Относительное позиционирование */
+    width: 100%;
+    height: 100vh; /* 100% высоты окна */
+}
+
+/* Стили для фона */
+.background {
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Сохранение пропорций, заполнение всего пространства */
+    pointer-events: none;
+}
+
+/* Стили для кнопок */
+.buttons {
+    position: relative; /* Относительное позиционирование */
+    width: 100%;
+    height: auto;
+    z-index: 2; /* Автоматическая высота */
+}
+
+.button-row {
+	margin-top: -0.5vh;
+    display: flex; /* Размещение элементов в ряд */
+    justify-content: space-between; /* Распределение элементов по краям */ 
+}
+
+.button {
+    width: 50%; /* 50% ширины кнопки */
+    height: 30.666%; /* 30.666% высоты кнопки */
+    cursor: pointer; /* Указатель курсора при наведении */
+    border: none; /* Убрать обводку */
+    background: none; /* Убрать фон */
+	text-decoration: none; /* Убрать подчеркивание ссылок */
+    display: inline-block;
+}
+
+.button img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    display: block;
+    height: 100%;
+}
+
+nav img {
+    /* Уменьшение размера изображений */
+    max-width: 10vh; /* Максимальная ширина */
+    max-height: 10vh; /* Максимальная высота */
+    object-fit: contain; /* Сохранить пропорции */
+    pointer-events: none;
+}
+p{
+    display: none
+}
+</style>
 <body>
 	<div class="container">
-		<div class="inner">
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn1">Додати в корзину</button>
-			</div>
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn2">Додати в корзину</button>
-			</div>
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn3">Додати в корзину</button>
-			</div>
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn4">Додати в корзину</button>
-			</div>
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn5">Додати в корзину</button>
-			</div>
-			<div class="item">
-				<img src="1.png" alt="" class="img">
-				<button class="btn" id="btn6">Додати в корзину</button>
-			</div>
-		</div>
-	</div>
-	<div class="usercard" id="usercard">
-		
-	</div>
-
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
-	<script src="app.js"></script>
+        <div class="background">
+            <img src="фон2.jpg" alt="Фон">
+        </div>
+        <header>
+        	<nav>
+            	<a href="index.html"><img src="back_icon.png" alt="Назад"></a>
+            	<a href="cart.html" class='aaa'><img src="cart_icon.png" alt="Корзина"></a>
+        	</nav>
+    	</header>
+        <div class="buttons">
+            <div class="button-row">
+                <button class="button"><p>Мята</p><img src="5knopka.png"></button>
+                <button class="button"><p>Яб пир</p><img src="5knopka.png"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><p>Вишня</p><img src="5knopka.png"></button>
+                <button class="button"><p>Персик</p><img src="5knopka.png" alt="Кнопка 4"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><p>Виноград</p><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><p>Ягоди</p><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><p>Енергетик</p><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+            <div class="button-row">
+                <button class="button"><img src="5knopka.png" alt="Кнопка 15"></button>
+                <button class="button"><img src="5knopka.png" alt="Кнопка 16"></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
