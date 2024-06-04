@@ -6,6 +6,9 @@
 	<title>Document</title>
 </head>
 <style>
+body {
+  overflow: hidden;
+}
 .container {
     position: relative;
     width: 100%;
@@ -13,11 +16,12 @@
 }
 
 .background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+	position: fixed; 
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+	pointer-events: none;
 }
 
 .button {
@@ -27,6 +31,8 @@
 }
 
 .button1 {
+	position: absolute;
+    width: 83.2%;
     top: 21.444%;
     left: 8.4%;
     height: 21.666%; /* Высота кнопки 1 */
@@ -53,19 +59,18 @@
 <body>
 	<div class="container">
         <img src="фон.jpg" alt="Фоновое изображение" class="background">
-        <a href="1.HTML">
-            <img src="1knopka.png" alt="Кнопка 1" class="button button1">
-        </a>
-        <a href="1.HTML">
+        <img src="1knopka.png" alt="Кнопка 1" class="button1">
+        <a href="1.html">
             <img src="2knopka.png" alt="Кнопка 2" class="button button2">
         </a>
-        <a href="1.HTML">
+        <a href="#">
             <img src="3knopka.png" alt="Кнопка 3" class="button button3">
         </a>
-        <a href="1.HTML">
+        <a href="#">
             <img src="4knopka.png" alt="Кнопка 4" class="button button4">
         </a>
     </div>
 </div>
+<script src="script.js" defer></script>
 </body>
 </html>

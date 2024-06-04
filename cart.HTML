@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+/* Стили для контейнера */
+@font-face {
+    font-family: "Inkulinati Regular";
+    src: url("Inkulinati-Regular.otf");
+}
+.container {
+    position: relative; /* Относительное позиционирование */
+    width: 100%;
+    height: 100vh; /* 100% высоты окна */
+}
+/* Стили для фона */
+.background {
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Сохранение пропорций, заполнение всего пространства */
+}
+
+/* Стили для кнопок */
+.buttons {
+    position: relative; /* Относительное позиционирование */
+    width: 100%;
+    height: auto;
+    z-index: 2; /* Автоматическая высота */
+}
+
+.button-row {
+	margin-top: -0.5vh;
+    display: flex; /* Размещение элементов в ряд */
+    justify-content: space-between; /* Распределение элементов по краям */ 
+}
+
+.button {
+    width: 50%; /* 50% ширины кнопки */
+    height: 30.666%; /* 30.666% высоты кнопки */
+    cursor: pointer; /* Указатель курсора при наведении */
+    border: none; /* Убрать обводку */
+    background: none; /* Убрать фон */
+	text-decoration: none; /* Убрать подчеркивание ссылок */
+    display: inline-block;
+}
+
+.button img {
+    width: 100%;
+    height: 100%;
+}
+.menu {
+	width: 100vh;
+	position: fixed;
+	height: 10vh;
+	background-color: green;
+	z-index: 100;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav a {
+    display: block;
+    height: 100%;
+}
+
+nav img {
+    /* Уменьшение размера изображений */
+    max-width: 10vh; /* Максимальная ширина */
+    max-height: 10vh; /* Максимальная высота */
+    object-fit: contain; /* Сохранить пропорции */
+    pointer-events: none;
+}
+.a2{
+    font-family: "Inkulinati Regular"
+}
+</style>
+<body>
+    <div class='cart'></div>  
+    <script src="cart.js" defer></script>
+</body>
+</html>
