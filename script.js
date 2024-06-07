@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll('.button')
 const tex = document.querySelector('.dodV')
 
-let tg = Window.Telegram.WepApp;
+let tg = Window.Telegram.WebApp;
 
 buttons.forEach((el, idx) =>{
 
