@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('.button')
+const tex = document.querySelector('.dodV')
 
-
+let tg = Window.Telegram.WepApp;
 
 buttons.forEach((el, idx) =>{
 
@@ -13,6 +14,8 @@ buttons.forEach((el, idx) =>{
     const cart = JSON.parse(storage)
     const card = {title}
     localStorage.setItem('but', JSON.stringify([...cart,card]))
+    let data = localStorage.getItem('but')
+    tg.sendData(JSON.stringify(data))
   })
 
 })
