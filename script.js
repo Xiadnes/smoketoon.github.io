@@ -1,7 +1,13 @@
 const buttons = document.querySelectorAll('.button')
-const tex = document.querySelector('.dodV')
+let tg = window.Telegram.WebApp;
 
-let tg = Window.Telegram.WebApp;
+tg.expand();
+
+tg.MainButton.textColor = '#FFFFFF';
+tg.MainButton.color = '#2cab37';
+
+let item = "";
+
 
 buttons.forEach((el, idx) =>{
 
@@ -14,10 +20,18 @@ buttons.forEach((el, idx) =>{
     const cart = JSON.parse(storage)
     const card = {title}
     localStorage.setItem('but', JSON.stringify([...cart,card]))
-    let data = localStorage.getItem('but')
-    tg.sendData(JSON.stringify(data))
+    if (tg.MainButton.isVisible) {
+      tg.MainButton.hide();
+    }
+    else {
+      tg.MainButton.setText("${card} додано в корзину!");
+      item = "${card}";
+      tg.MainButton.show();
+    }
   })
 
+
 })
+
 
 
