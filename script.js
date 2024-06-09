@@ -20,17 +20,7 @@ buttons.forEach((el, idx) =>{
     const cart = JSON.parse(storage)
     const card = {title}
     localStorage.setItem('but', JSON.stringify([...cart,card]))
-    if (tg.MainButton.isVisible) {
-      tg.MainButton.hide();
-    }
-    else {
-      tg.MainButton.setText("${card} додано в корзину!");
-      item = "${card}";
-      tg.MainButton.show();
-    }
-  })
-
-
+    item = "${card}";
 })
 
 
