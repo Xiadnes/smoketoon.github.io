@@ -3,9 +3,6 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
-tg.MainButton.textColor = '#FFFFFF';
-tg.MainButton.color = '#2cab37';
-
 let item = "";
 
 
@@ -20,7 +17,11 @@ buttons.forEach((el, idx) =>{
     const cart = JSON.parse(storage)
     const card = {title}
     localStorage.setItem('but', JSON.stringify([...cart,card]))
-    item = "${card}";
+    item = title;
+    tg.sendData(item);
+  })
+
+
 })
 
 
