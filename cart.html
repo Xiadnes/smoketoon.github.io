@@ -29,6 +29,7 @@
     width: 100%;
     height: 100%;
     z-index: 1; /* Сохранение пропорций, заполнение всего пространства */
+    pointer-events: none;
 }
 
 /* Стили для кнопок */
@@ -71,7 +72,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
+    height: 10.3vh;
     background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
     z-index: 100;
 }
@@ -95,21 +96,96 @@ nav img {
     object-fit: contain; /* Сохранить пропорции */
     pointer-events: none;
 }
-.cart{
-	position: relative;
-}
 .a2{
     font-family: "Inkulinati Regular"
+}
+.cart{
+    position: relative;
+    background-image: url('фонк.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    min-height: 66vh;
+}
+
+.cartboard{
+    position: absolute;
+    width: 83.2%;
+    top: 21.444%;
+    left: 8.4%;
+    height: 73.33%; /* Высота кнопки 1 */
+}
+.ebn{
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+.foo { /* Класс для div */
+    display: flex; /* Размещает элементы в строке */
+    justify-content: space-between; /* Равномерно распределяет пространство между элементами */
+    align-items: flex-start; /* Выравнивает элементы по вертикали сверху */
+    border: 1.3px solid black; /* Небольшая серая обводка */
+    margin-top: 3%; 
+    padding: 1.1%; /* Отступ внутри div */
+    font-family: "Inkulinati Regular";
+    width: 90.2%;
+}
+
+.foo p{
+    font-size: 4vw;
+}
+.foo .element { /* Стиль для элементов внутри div */
+    flex: 1; /* Занимает все доступное пространство */
+    margin-right: 4%; /* Отступ справа от элементов, кроме последнего */
+}
+
+.foo button { /* Стиль для кнопки */
+    flex: 0; /* Не занимает пространство */
+    align-self: flex-end; /* Выравнивает кнопку по вертикали снизу */
+    background-color: #662500;
+    border: 1px solid black;
+    height: 4vh;
+    font-size: 3vw;
+    font-family: "Inkulinati Regular";
+    border-radius: 10px 10px;
+}
+.ofor {
+    margin-top: 3vh;
+    margin-left: 7vh;
+    background-color: #60331b;
+    border: 1px solid black;
+    height: 5vh;
+    font-size: 4vw;
+    font-family: "Inkulinati Regular";
+    border-radius: 10px 10px;
+
+}
+.knopki{
+    position: relative;
+    margin-top: 25.45%;
+    left: 3.4%;
+    padding-bottom: 5%;
+
+
 }
 </style>
 <body>
     <header>
-            <nav>
-                <a href="index.html"><img src="back_icon.png" alt="Назад"></a>
-                <a href="cart.html" class='aaa'><img src="cart_icon.png" alt="Корзина"></a>
-            </nav>
-        </header>
-    <div class='cart'></div>  
+        <nav>
+            <a href="1.html"><img src="back_icon.png" alt="Назад"></a>
+            <a href="cart.html" class='aaa'><img src="cart_icon.png" alt="Корзина"></a>
+        </nav>
+    </header>
+    <div class="background">
+        <img src="фон3.jpg" alt="Фон">
+    </div>
+    <div class="cartboard">
+        <div class='cart'><div class='knopki'></div></div>   
+    </div>
+
+
     <script src="cart.js" defer></script>
 </body>
 </html>
