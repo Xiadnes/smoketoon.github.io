@@ -1,3 +1,6 @@
+let tg = window.Telegram.WebApp;
+
+tg.expand();
 const storage = JSON.parse(localStorage.getItem('but') || '[]')
 const textarea = document.querySelectorAll('.knopki')
 
