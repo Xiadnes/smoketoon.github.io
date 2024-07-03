@@ -101,7 +101,7 @@ nav img {
 }
 .cart{
     position: relative;
-    background-image: url('фонк.png');
+    background-image: url('оформлення.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow:hidden;
@@ -133,22 +133,6 @@ nav img {
     width: 90.2%;
 }
 
-.foo1 { /* Класс для div */
-    display: flex; /* Размещает элементы в строке */
-    align-items: flex-start; /* Выравнивает элементы по вертикали сверху */
-    border: 1.3px solid black; /* Небольшая серая обводка */
-    margin-top: 3%; 
-    margin-right: 10%; 
-    padding: 1.1%; /* Отступ внутри div */
-    font-family: "Inkulinati Regular";
-    width: 90.2%;
-}
-
-.foo1 p{
-    font-size: 4.5vw;
-    margin-right: 40%; 
-    width: 0vh;
-}
 .foo p{
     font-size: 4vw;
 }
@@ -168,12 +152,12 @@ nav img {
     border-radius: 10px 10px;
 }
 .ofor {
-    margin-top: 3vh;
-    margin-left: 7vh;
+    margin-top: 1vh;
+    margin-left: 6vh;
     background-color: #60331b;
     border: 1px solid black;
-    height: 5vh;
-    font-size: 4vw;
+    height: 7vh;
+    font-size: 5vw;
     font-family: "Inkulinati Regular";
     border-radius: 10px 10px;
 
@@ -186,21 +170,61 @@ nav img {
 
 
 }
-@keyframes verx {
-    from {
-    }
-    to{
-        top: -70em;
-    }
+.select1{
+    width: 30vh;
+    height: 6vh;
+    position: absolute;
+    margin-left: 4vh;
+    margin-top: 19vh;
+    background-color: #60331b;
+    border-color: black;
+    font-family: "Inkulinati Regular";
+    font-size: 4vw;
+
 }
-.vverx{
-    animation: verx 1s infinite linear;
+.select2{
+    width: 30vh;
+    height: 6vh;
+    margin-left: 4vh;
+    margin-top: 32vh;
+    background-color: #60331b;
+    border-color: black;
+    font-family: "Inkulinati Regular";
+    font-size: 4vw;
+
+}
+.op1tion{
+
+}
+textarea{
+    box-sizing: border-box;
+    position: absolute;
+    width: 40vh;
+    height: 10vh;
+    margin-left: -40vh;
+    margin-top: 48vh;
+    background-color: #60331b;
+    border-color: black;
+    font-family: "Inkulinati Regular";
+    font-size: 3vw; 
+    text-align: top;
+}
+.splata{
+    font-family: "Inkulinati Regular";
+    font-size: 5.2vw; 
+    margin-left: 2vh;
+    margin-top: 5vh;
+}
+.splata1{
+    font-family: "Inkulinati Regular";
+    font-size: 4.2vw; 
+    margin-left: 2vh;
 }
 </style>
 <body>
     <header>
         <nav>
-            <a href="1.html"><img src="back_icon.png" alt="Назад"></a>
+            <a href="cart.html"><img src="back_icon.png" alt="Назад"></a>
             <a href="cart.html" class='aaa'><img src="cart_icon.png" alt="Корзина"></a>
         </nav>
     </header>
@@ -208,10 +232,36 @@ nav img {
         <img src="фон3.jpg" alt="Фон">
     </div>
     <div class="cartboard" id='pipioo'>
-        <div class='cart'><div class='knopki'></div></div>   
+        <div class='cart'>
+            <select class="select1" name="">
+                <option class="op1tion" value="Маяк">Маяк</option>
+                <option class="op1tion" value="Атб бiля вокзалу">Атб бiля вокзалу</option>
+                <option value="3">Лоток</option>
+                <option value="4">КЗ</option>
+            </select>
+            <select class="select2" name="">
+                <optgroup class='gr1' label="Сьогоднi">
+                <option value="1">11</option>
+                <option value="2">12</option>
+                <option value="3">13</option>
+                <option value="4">14</option>
+                <option value="5">15</option>
+                <option value="6">16</option>
+                </optgroup>
+                <optgroup class='gr2' label="Завтра">
+                <option value="1">11</option>
+                <option value="2">12</option>
+                <option value="3">13</option>
+                <option value="4">14</option>
+                <option value="5">15</option>
+                <option value="6">16</option>
+                </optgroup>
+            </select>
+            <p class="splata">До сплати</p>
+            <p class="splata1">(оплата готiвкою при отриманнi)</p>
+            <button class="ofor" id="rr">Пiдтвердити замовлення</button>
+        </div>   
     </div>
-
-
-    <script src="cart.js" defer></script>
+    <script src="oform.js" defer></script>
 </body>
 </html>
