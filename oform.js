@@ -1,6 +1,6 @@
 const storage = JSON.parse(localStorage.getItem('but') || '[]')
 const textarea = document.querySelectorAll('.knopki')
-let tg = window.Telegram.WebApp;
+
 
 tg.expand();
 const select1 = document.querySelector('.select1');
