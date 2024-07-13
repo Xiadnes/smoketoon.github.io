@@ -9,7 +9,7 @@ const storage = localStorage.getItem('but') || '[]'
 buttons.forEach((el, idx) =>{
 
   const title = el.id
-  const btn = el
+  const btn = el.childNodes[0]
   const price = 2
   
   btn.addEventListener('click', () =>{
