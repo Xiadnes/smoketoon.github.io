@@ -8,7 +8,7 @@ let item = "";
 const storage = localStorage.getItem('but') || '[]'
 buttons.forEach((el, idx) =>{
 
-  const title = el.childNodes[0].innerText
+  const title = el.id
   const btn = el
   const price = 2
   
