@@ -1,4 +1,3 @@
-
 const buttons = document.querySelectorAll('.button')
 let tg = window.Telegram.WebApp;
 
@@ -19,7 +18,7 @@ buttons.forEach((el, idx) =>{
   if (mobile === 'true') {
     btn.addEventListener('touchstart', () => {
     let o = JSON.parse(localStorage.getItem('but'));
-    if (storage.length < 6) {
+    if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
         const cart = JSON.parse(storage)
         const card = {title}
@@ -27,11 +26,8 @@ buttons.forEach((el, idx) =>{
     }});
   } else{
     btn.addEventListener('click', () => {
-    window.location.href = 'oform.html';
     let o = JSON.parse(localStorage.getItem('but'));
-    alert(o)
-    alert(storage)
-    if (storage.length < 6) {
+    if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
         const cart = JSON.parse(storage)
         const card = {title}

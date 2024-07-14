@@ -33,13 +33,6 @@ const newCard = document.createElement('div')
 newCard.className = 'foo1';
 
 newCard.innerHTML = '<p>Сума:</p><p> '+120*storage.length+'грн</p>'
-mobile = navigator.maxTouchPoints > 0 && 'orientation' in window
-console.log(mobile)
-if (mobile === 'true') {
-	newCard.innerHTML = 'ви з телефона'	
-} else{
-	newCard.innerHTML = 'ви з компа'	
-};
 cardSide[0].appendChild(newCard)
 cardSide[0].appendChild(ofor)
 }
