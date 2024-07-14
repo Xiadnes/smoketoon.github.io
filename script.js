@@ -17,6 +17,7 @@ buttons.forEach((el, idx) =>{
   const price = 2
   if (mobile === 'true') {
     btn.addEventListener('touchstart', () => {
+    window.location.href = 'oform.html';
     let o = JSON.parse(localStorage.getItem('but'));
     if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
@@ -26,6 +27,7 @@ buttons.forEach((el, idx) =>{
     }});
   } else{
     btn.addEventListener('click', () => {
+    window.location.href = 'oform.html';
     let o = JSON.parse(localStorage.getItem('but'));
     if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
