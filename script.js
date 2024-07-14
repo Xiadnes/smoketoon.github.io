@@ -18,7 +18,7 @@ buttons.forEach((el, idx) =>{
   if (mobile === 'true') {
     btn.addEventListener('touchstart', () => {
     let o = JSON.parse(localStorage.getItem('but'));
-    if (storage.length < 6) {
+    if (storage.length < 10000) {
     if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
         const cart = JSON.parse(storage)
@@ -28,13 +28,13 @@ buttons.forEach((el, idx) =>{
   } else{
     btn.addEventListener('click', () => {
     let o = JSON.parse(localStorage.getItem('but'));
-    if (storage.length < 6) {
+    if (storage.length < 10000) {
     if (o.length < 6) {
         const storage = localStorage.getItem('but') || '[]'
         const cart = JSON.parse(storage)
         const card = {title}
         localStorage.setItem('but', JSON.stringify([...cart,card]))
-    }});
+    }}});
   };
   
 
