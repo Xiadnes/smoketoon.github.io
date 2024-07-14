@@ -1,8 +1,8 @@
+let tg = window.Telegram.WebApp;
+
 const storage = JSON.parse(localStorage.getItem('but') || '[]')
 const textarea = document.querySelectorAll('.knopki')
 
-
-tg.expand();
 const select1 = document.querySelector('.select1');
 const select2 = document.querySelector('.select2');
 const gr1 = document.querySelector('.gr1');
@@ -163,7 +163,7 @@ function updateSelect2() {
 
 // Запустить updateSelect2 при загрузке страницы
 updateSelect2();
-
+updateSelect2();
 // Обновить select2 при изменении значения в select1
 select1.addEventListener('change', updateSelect2);
 

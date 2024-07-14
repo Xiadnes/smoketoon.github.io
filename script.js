@@ -1,10 +1,15 @@
 const buttons = document.querySelectorAll('.button')
+let tg = window.Telegram.WebApp;
+
+tg.expand();
+
+let item = "";
 
 const storage = localStorage.getItem('but') || '[]'
 buttons.forEach((el, idx) =>{
 
   const title = el.id
-  const btn = el.childNodes[0]
+  const btn = el
   const price = 2
   
   btn.addEventListener('click', () =>{
@@ -14,6 +19,8 @@ buttons.forEach((el, idx) =>{
         const cart = JSON.parse(storage)
         const card = {title}
         localStorage.setItem('but', JSON.stringify([...cart,card]))
+//      item = title;
+//      tg.sendData(item);
     } else {
       
     }
@@ -26,6 +33,8 @@ buttons.forEach((el, idx) =>{
         const cart = JSON.parse(storage)
         const card = {title}
         localStorage.setItem('but', JSON.stringify([...cart,card]))
+//      item = title;
+//      tg.sendData(item);
     }
   })
 
@@ -36,6 +45,8 @@ buttons.forEach((el, idx) =>{
         const cart = JSON.parse(storage)
         const card = {title}
         localStorage.setItem('but', JSON.stringify([...cart,card]))
+//      item = title;
+//      tg.sendData(item);
     }
   })
 })

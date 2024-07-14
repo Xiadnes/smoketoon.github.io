@@ -2,6 +2,7 @@ const cardSide = document.querySelectorAll('.knopki')
 const storage = JSON.parse(localStorage.getItem('but') || '[]')
 const cart = document.querySelectorAll('.knopki')
 const ofor = document.createElement('button')
+
 ofor.innerHTML = 'Перейти до оформлення'
 ofor.className = 'ofor';
 ofor.id = 'oformsuper';
